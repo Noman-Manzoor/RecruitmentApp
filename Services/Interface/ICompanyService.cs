@@ -1,6 +1,6 @@
-﻿using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.ResponseModel;
-using Domain.BusinessModels.UpdateModel;
+﻿using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.ResponseModel;
+using Services.BusinessModels.UpdateModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +11,10 @@ namespace Services.Interface
 {
     public interface ICompanyService
     {
-        Task<bool> AddCompanyAsync(CompanyRequestModel request);
-        Task<bool> UpdateCompanyAsync(CompanyUpdateRequestModel request);
-        Task<List<CompanyResponseModel>> GetAllCompaniesAsync();
-        Task<CompanyResponseModel> GetCompanyByIdAsync(int? id);
-        Task<bool> DeleteCompanyAsync(int? id);
+        Task<bool> AddCompany(CompanyRequestModel request);
+        Task<bool> UpdateCompany(CompanyUpdateRequestModel request);
+        Task<List<CompanyResponseModel>> GetAllCompanies();
+        Task<CompanyResponseModel> GetCompanyById(int? id);
+        Task<bool> DeleteCompany(int? id);
     }
 }

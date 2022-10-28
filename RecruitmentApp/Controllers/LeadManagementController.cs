@@ -1,7 +1,6 @@
-﻿using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.UpdateModel;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.UpdateModel;
 using Services.Interface;
 
 namespace RecruitmentApp.Controllers

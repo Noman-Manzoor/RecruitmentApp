@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.BusinessModels.ResponseModel
+namespace Services.BusinessModels.UpdateModel
 {
-    public class LeadManagmentResponseModel
+    public class LeadManagmentUpdateRequestModel
     {
         public int Id { get; set; }
-        public string? ProfileName { get; set; }
-        public string? RecruiterCompanyName { get; set; }
+        public int? RecruiterCompanyId { get; set; }
+        public int? CompanyId { get; set; }
+        public int? ProfileId { get; set; }
         public string? RecruiterName { get; set; }
-        public string? CompanyName { get; set; }
         public string? Interviewee { get; set; }
         public string? Interviewer { get; set; }
         public string? InterviewLevel { get; set; }

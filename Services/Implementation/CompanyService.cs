@@ -1,21 +1,11 @@
 ﻿using AutoMapper;
-using Domain.BusinessModels.Request;
-using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.Response;
-using Domain.BusinessModels.ResponseModel;
-using Domain.BusinessModels.Update;
-using Domain.BusinessModels.UpdateModel;
+using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.ResponseModel;
+using Services.BusinessModels.UpdateModel;
 using Domain.Entities;
 using Infrastructure.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
 using Services.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+
 
 namespace Services.Implementation
 {
@@ -23,16 +13,14 @@ namespace Services.Implementation
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IMapper mapper;
-        private readonly DMRecruitmentContext _db;
 
-        public CompanyService(IUnitOfWork unitOfWork, IMapper mapper, DMRecruitmentContext db)
+        public CompanyService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
-            _db = db;
         }
 
-        public async Task<bool> AddCompanyAsync(CompanyRequestModel request)
+        public async Task<bool> AddCompany(CompanyRequestModel request)
         {
             var newCompany = new Company()
             {
@@ -70,7 +58,7 @@ namespace Services.Implementation
             return true;
         }
 
-        public async Task<bool> UpdateCompanyAsync(CompanyUpdateRequestModel request)
+        public async Task<bool> UpdateCompany(CompanyUpdateRequestModel request)
         {
             var existingCompany = await this.unitOfWork.Repository<Company>().FindAsync(x => x.CompanyId == request.Id && x.IsDeleted != true);
             if (existingCompany != null)
@@ -107,7 +95,7 @@ namespace Services.Implementation
             return false;
 
         }
-        public async Task<List<CompanyResponseModel>> GetAllCompaniesAsync()
+        public async Task<List<CompanyResponseModel>> GetAllCompanies()
         {
             var companyResponseList = new List<CompanyResponseModel>();
             var companies = await this.unitOfWork.Repository<Company>().FindAllAsync(x => x.IsDeleted == false);
@@ -123,7 +111,7 @@ namespace Services.Implementation
             return companyResponseList;
         }
 
-        public async Task<CompanyResponseModel> GetCompanyByIdAsync(int? id)
+        public async Task<CompanyResponseModel> GetCompanyById(int? id)
         {
             var companyResponse = new CompanyResponseModel();
             var company = await this.unitOfWork.Repository<Company>().FindAsync(x => x.CompanyId == id && x.IsDeleted != true);
@@ -133,7 +121,7 @@ namespace Services.Implementation
             }
             return companyResponse;
         }
-        public async Task<bool> DeleteCompanyAsync(int? id)
+        public async Task<bool> DeleteCompany(int? id)
         {
             var companyExist = await this.unitOfWork.Repository<Company>().FindAsync(x => x.CompanyId == id && x.IsDeleted != true);
             if (companyExist != null)

@@ -1,9 +1,7 @@
-﻿using AutoMapper;
-using Domain.BusinessModels.Request;
-using Domain.BusinessModels.Response;
-using Domain.BusinessModels.Update;
-using Microsoft.AspNetCore.Mvc;
-using RecruitmentApp.Constant;
+﻿using Microsoft.AspNetCore.Mvc;
+using Services.BusinessModels.Request;
+using Services.BusinessModels.Response;
+using Services.BusinessModels.Update;
 using Services.Interface;
 
 namespace RecruitmentApp.Controllers

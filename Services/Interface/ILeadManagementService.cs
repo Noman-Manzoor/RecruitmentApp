@@ -1,11 +1,6 @@
-﻿using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.ResponseModel;
-using Domain.BusinessModels.UpdateModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.ResponseModel;
+using Services.BusinessModels.UpdateModel;
 
 namespace Services.Interface
 {

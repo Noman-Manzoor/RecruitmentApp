@@ -1,16 +1,10 @@
 ﻿using AutoMapper;
-using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.ResponseModel;
-using Domain.BusinessModels.UpdateModel;
 using Domain.Entities;
 using Infrastructure.UnitOfWork;
+using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.ResponseModel;
+using Services.BusinessModels.UpdateModel;
 using Services.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Services.Implementation
 {

@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
-using Domain.BusinessModels.Request;
-using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.Response;
-using Domain.BusinessModels.ResponseModel;
+using Services.BusinessModels.Request;
 using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Services.BusinessModels.Response;
+using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.ResponseModel;
 
-namespace Domain.AutoMapper.Configuration
+namespace Services.AutoMapper.Configuration
 {
     /// <summary>
     /// Auto Mapper Configuration

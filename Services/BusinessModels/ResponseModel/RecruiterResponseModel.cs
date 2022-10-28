@@ -1,5 +1,5 @@
 ﻿
-namespace Domain.BusinessModels.Response
+namespace Services.BusinessModels.Response
 {
     public class RecruiterResponseModel
     {

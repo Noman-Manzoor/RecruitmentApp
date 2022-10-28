@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
-using Domain.BusinessModels.Request;
-using Domain.BusinessModels.Response;
-using Domain.BusinessModels.Update;
 using Domain.Entities;
 using Infrastructure.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
+using Services.BusinessModels.Request;
+using Services.BusinessModels.Response;
+using Services.BusinessModels.Update;
 using Services.Interface;
-using System.Data;
 
 
 namespace Services.Implementation
@@ -152,6 +150,7 @@ namespace Services.Implementation
                     {
                         var profileResponse = new ProfileManagementResponseModel()
                         {
+                             Id = item.Id,
                             FirstName = item.FirstName,
                             MiddleName = item.MiddleName,
                             LastName = item.LastName,
@@ -192,6 +191,7 @@ namespace Services.Implementation
                 {
                     var profileResponse = new ProfileManagementResponseModel()
                     {
+                         Id = profile.Id,
                         FirstName = profile.FirstName,
                         MiddleName = profile.MiddleName,
                         LastName = profile.LastName,
@@ -231,6 +231,7 @@ namespace Services.Implementation
                 {
                     var profileResponse = new ProfileManagementResponseModel()
                     {
+                         Id = profile.Id,
                         FirstName = profile.FirstName,
                         MiddleName = profile.MiddleName,
                         LastName = profile.LastName,

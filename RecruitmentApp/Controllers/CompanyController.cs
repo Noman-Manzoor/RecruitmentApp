@@ -1,10 +1,6 @@
-﻿using Domain.BusinessModels.Request;
-using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.Update;
-using Domain.BusinessModels.UpdateModel;
-using Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage;
+﻿using Microsoft.AspNetCore.Mvc;
+using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.UpdateModel;
 using Services.Interface;
 
 namespace RecruitmentApp.Controllers
@@ -27,7 +23,7 @@ namespace RecruitmentApp.Controllers
             {
                 if (request != null)
                 {
-                    var companyAdded = await this._companyService.AddCompanyAsync(request);
+                    var companyAdded = await this._companyService.AddCompany(request);
                     return Ok(companyAdded);
                 }
                 return Ok("Request payload cannot be null or empty");
@@ -46,7 +42,7 @@ namespace RecruitmentApp.Controllers
             {
                 if (request != null && request.Id > 0)
                 {
-                    var companyUpdated = await this._companyService.UpdateCompanyAsync(request);
+                    var companyUpdated = await this._companyService.UpdateCompany(request);
                     return Ok(companyUpdated);
                 }
                 return Ok("Please enter the valid id");
@@ -63,7 +59,7 @@ namespace RecruitmentApp.Controllers
         {
             try
             {
-                var company = await this._companyService.GetAllCompaniesAsync();
+                var company = await this._companyService.GetAllCompanies();
                 return Ok(company);
             }
             catch (Exception ex)
@@ -80,7 +76,7 @@ namespace RecruitmentApp.Controllers
             {
                 if (id != null && id > 0)
                 {
-                    var company = await this._companyService.GetCompanyByIdAsync(id);
+                    var company = await this._companyService.GetCompanyById(id);
                     if (company.CompanyId != 0 && company != null)
                         return Ok(company);
                 }
@@ -100,7 +96,7 @@ namespace RecruitmentApp.Controllers
             {
                 if (id != null && id > 0)
                 {
-                    var company = await this._companyService.DeleteCompanyAsync(id);
+                    var company = await this._companyService.DeleteCompany(id);
                     return Ok(company);
                 }
                 return Ok("Please enter the valid id");

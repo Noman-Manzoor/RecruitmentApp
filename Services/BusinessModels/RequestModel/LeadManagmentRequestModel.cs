@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.BusinessModels.UpdateModel
+namespace Services.BusinessModels.RequestModel
 {
-    public class LeadManagmentUpdateRequestModel
+    public class LeadManagmentRequestModel
     {
-        public int Id { get; set; }
         public int? RecruiterCompanyId { get; set; }
         public int? CompanyId { get; set; }
         public int? ProfileId { get; set; }

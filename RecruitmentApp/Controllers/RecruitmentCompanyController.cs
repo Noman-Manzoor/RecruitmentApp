@@ -1,10 +1,7 @@
-﻿using Domain.BusinessModels.Request;
-using Domain.BusinessModels.RequestModel;
-using Domain.BusinessModels.Update;
-using Domain.BusinessModels.UpdateModel;
-using Domain.Entities;
+﻿
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage;
+using Services.BusinessModels.RequestModel;
+using Services.BusinessModels.UpdateModel;
 using Services.Interface;
 
 namespace RecruitmentApp.Controllers

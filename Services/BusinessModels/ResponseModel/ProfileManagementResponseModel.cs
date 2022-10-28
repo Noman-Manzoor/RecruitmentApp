@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.BusinessModels.Response
+namespace Services.BusinessModels.Response
 {
     public class ProfileManagementResponseModel
     {

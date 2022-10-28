@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.BusinessModels.UpdateModel
+namespace Services.BusinessModels.RequestModel
 {
-    public class RecruitmentCompanyUpdateRequestModel
+    public class RecruitmentCompanyRequestModel
     {
-        public int RecruitmentCompanyId { get; set; }
-
         public string? Name { get; set; }
         public string? ContactNumber { get; set; }
         public string? Email { get; set; }
@@ -17,5 +15,6 @@ namespace Domain.BusinessModels.UpdateModel
         public string? CompanyType { get; set; }
         public string? Description { get; set; }
         public string? Status { get; set; }
+
     }
 }

@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using Domain.BusinessModels.Request;
-using Domain.BusinessModels.Response;
-using Domain.BusinessModels.Update;
 using Domain.Entities;
 using Infrastructure.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
+using Services.BusinessModels.Request;
+using Services.BusinessModels.Response;
+using Services.BusinessModels.Update;
 using Services.Interface;
 
 

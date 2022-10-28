@@ -1,12 +1,9 @@
-using Domain.AutoMapper.Configuration;
+using Services.AutoMapper.Configuration;
 using Domain.Entities;
 using Infrastructure.UnitOfWork;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Services.Implementation;
 using Services.Interface;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 

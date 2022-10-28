@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.BusinessModels.UpdateModel
+namespace Services.BusinessModels.UpdateModel
 {
     public class CompanyUpdateRequestModel
     {
